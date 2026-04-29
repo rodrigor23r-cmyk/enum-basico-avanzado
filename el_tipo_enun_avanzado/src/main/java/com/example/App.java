@@ -21,9 +21,8 @@ public class App {
     	
     	/* Sentencia operaciones de agregado
     	
-    	 List<Season> season = new ArrayList<Season>();
-    	
-    	new ArrayList<Season>(Arrays.asList(Season.values()));
+    	List<Season> seasons = new ArrayList<>(Arrays.asList(Season.values()));
+
     	*/
     	
     	 Stream<Season> flujoDeSeason = Arrays.stream(Season.values());
@@ -35,6 +34,8 @@ public class App {
     	 /*
     	  * el método stream de la clase arrays genera un flujo a partir un array
     	  * */
+    	 System.out.println("========================de mi cosecha========================");
+    	 Stream.of(Season.values()).forEach(sea -> System.out.println("nombre: " + sea.name() + ", ordinal: " + sea.ordinal()));
     	 
     }
 }
